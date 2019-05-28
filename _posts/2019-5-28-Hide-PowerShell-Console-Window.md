@@ -9,6 +9,14 @@ your inability to make it go away.
 
 Luckily there are some C# tricks that we can employ to make our GUI tools look more professional.
 
+No BUENO!
+![not hidden]({{ site.baseurl }}/images/console_window_not_hidden.PNG)
+
+MUY BUENO
+![hidden]({{ site.baseurl }}/images/console_window_hidden.PNG)
+
+Just add any of the functions listed below to your script and call it prior to displaying your GUI to gracefully hide the console window.
+
 ```javascript
 #--------------------------------------------------------------------------------
 $showWindowAsync = Add-Type –memberDefinition @” 
