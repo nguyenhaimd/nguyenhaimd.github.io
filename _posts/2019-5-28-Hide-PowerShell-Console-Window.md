@@ -70,7 +70,7 @@ function Hide-Console {
 ```
 -------------------------------------------------------------------------------
 
-Reference:
-https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui
-https://www.sapien.com/forums/viewtopic.php?t=6833
-https://www.reddit.com/r/PowerShell/comments/4gt73m/run_powershell_script_without_a_console_window/
+#### Reference:
+[https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui](https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui)
+[https://www.sapien.com/forums/viewtopic.php?t=6833](https://www.sapien.com/forums/viewtopic.php?t=6833)
+[https://www.reddit.com/r/PowerShell/comments/4gt73m/run_powershell_script_without_a_console_window/](https://www.reddit.com/r/PowerShell/comments/4gt73m/run_powershell_script_without_a_console_window/)
