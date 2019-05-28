@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: PS GUI: Hiding PowerShell Console Window
+title: PS GUI - Hiding PowerShell Console Window
 ---
 A typical problem when running PowerShell GUI tools is what to do with the console window that is active for the duration of the script.
 You can always move it out of the way so it's not an eyesore but its not an elegant solution and deep down you know its there judging
@@ -9,6 +9,7 @@ your inability to make it go away.
 
 Luckily there are some C# tricks that we can employ to make our GUI tools look more professional.
 
+```javascript
 #--------------------------------------------------------------------------------
 $showWindowAsync = Add-Type –memberDefinition @” 
 [DllImport("user32.dll")] 
@@ -22,7 +23,7 @@ function Show-PowerShell() {
 function Hide-PowerShell() { 
     [void]$showWindowAsync::ShowWindowAsync((Get-Process –id $pid).MainWindowHandle, 2) 
 }
-```javascript
+
 #-------------------------------------------------------------------------------
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
@@ -57,6 +58,7 @@ function Hide-Console {
 }
 hide-console
 ```
+#-------------------------------------------------------------------------------
 Reference:
 https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui
 https://www.sapien.com/forums/viewtopic.php?t=6833
