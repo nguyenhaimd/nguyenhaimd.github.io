@@ -7,4 +7,4 @@ Thanks for visiting my humble blog. I plan on sharing what I've learned about Po
 
 This is the coolest I'll ever be. I peaked in 2007. Just glad that it wasn't very windy that day.
 
-({{ site.baseurl }}/images/grandcanyon.jpg)
+![Grand Canyon]({{ site.baseurl }}/images/grandcanyon.jpg)
