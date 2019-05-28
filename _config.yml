@@ -9,7 +9,7 @@ name: Hai D. Nguyen
 description: PowerShell aficionado | PEGA Developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://avatars0.githubusercontent.com/u/1325429?s=400&u=d9cbf3ca0d4f4b2bf1c591e99e932bc037d30da4&v=4
 
 #
 # Flags below are optional
@@ -23,9 +23,9 @@ footer-links:
   flickr:
   github: nguyenhaimd
   instagram:
-  linkedin: https://www.linkedin.com/in/nguyendanghai/
+  linkedin: hnguyendanghai
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: nguyenhai
   twitter: nguyenhai
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
