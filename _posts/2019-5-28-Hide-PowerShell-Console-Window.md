@@ -32,7 +32,6 @@ public static extern IntPtr GetConsoleWindow();
 [DllImport("user32.dll")]
 public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);
 '
-
 function ShowConsole
 {
     $consolePtr = [Console.Window]::GetConsoleWindow()
@@ -56,9 +55,10 @@ function Hide-Console {
     $consolePtr = [Console.Window]::GetConsoleWindow()
     [void][Console.Window]::ShowWindow($consolePtr, 0)
 }
-hide-console
+
 ```
 #-------------------------------------------------------------------------------
+
 Reference:
 https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui
 https://www.sapien.com/forums/viewtopic.php?t=6833
