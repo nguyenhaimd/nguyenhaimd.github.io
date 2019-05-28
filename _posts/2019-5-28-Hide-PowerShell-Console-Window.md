@@ -12,13 +12,14 @@ Luckily there are some C# tricks that we can employ to make our GUI tools look m
 No BUENO!
 ![not hidden]({{ site.baseurl }}/images/console_window_not_hidden.PNG)
 
-MUY BUENO
+MUY BUENO!
 ![hidden]({{ site.baseurl }}/images/console_window_hidden.PNG)
 
 Just add any of the functions listed below to your script and call it prior to displaying your GUI to gracefully hide the console window.
 
 ```javascript
-#--------------------------------------------------------------------------------
+# Option # 1
+-------------------------------------------------------------------------------
 $showWindowAsync = Add-Type –memberDefinition @” 
 [DllImport("user32.dll")] 
 public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow); 
@@ -32,7 +33,8 @@ function Hide-PowerShell() {
     [void]$showWindowAsync::ShowWindowAsync((Get-Process –id $pid).MainWindowHandle, 2) 
 }
 
-#-------------------------------------------------------------------------------
+# Option # 2
+-------------------------------------------------------------------------------
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
 public static extern IntPtr GetConsoleWindow();
@@ -52,7 +54,8 @@ function HideConsole
     [Console.Window]::ShowWindow($consolePtr, 0) #0 hide
 }
 
-#-------------------------------------------------------------------------------
+# Option # 3
+-------------------------------------------------------------------------------
 Add-Type -Name Window -Namespace Console -MemberDefinition '
     [DllImport("Kernel32.dll")]
     public static extern IntPtr GetConsoleWindow();
@@ -65,7 +68,7 @@ function Hide-Console {
 }
 
 ```
-#-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Reference:
 https://stackoverflow.com/questions/40617800/opening-powershell-script-and-hide-command-prompt-but-not-the-gui
