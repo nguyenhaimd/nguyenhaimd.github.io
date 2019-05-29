@@ -11,15 +11,20 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    
+    <!-- jekyll simple search -->
+    <script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    
+    var sjs = SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+    
   </head>
   
-  <!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="Search ...">
-<ul id="results-container"></ul>
-<!-- jekyll simple search -->
-<script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
 
   <body>
     <div class="wrapper-masthead">
@@ -35,6 +40,9 @@
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
+              <!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search ...">
+<ul id="results-container"></ul>
           </nav>
         </header>
       </div>
