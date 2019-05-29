@@ -5,7 +5,7 @@ categories: [PEGA]
 ---
 
 In PEGA, as in most standard development life cycle, there is always a need to deprecate previously developed features.
-In PEGA world, this is down by withdrawing a rule.
+In PEGA world, this is done by withdrawing a rule.
 
 Follow the steps below to withdraw a rule
 
