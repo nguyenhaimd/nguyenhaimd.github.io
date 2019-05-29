@@ -40,11 +40,14 @@
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
-              <!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="Search ...">
-<ul id="results-container"></ul>
           </nav>
         </header>
+        
+        <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+        
       </div>
     </div>
 
@@ -61,5 +64,19 @@
     </div>
 
     {% include analytics.html %}
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/Simple-Jekyll-Search/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+    
   </body>
 </html>
