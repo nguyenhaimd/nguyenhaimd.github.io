@@ -2,6 +2,7 @@
 layout: post
 
 title: PS GUI - Hiding PowerShell Console Window
+categories: [PowerShell]
 ---
 A typical problem when running PowerShell GUI tools is what to do with the console window that is active for the duration of the script.
 You can always move it out of the way so it's not an eyesore but its not an elegant solution and deep down you know its there judging
